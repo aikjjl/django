@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib import admin
+from django.urls import path,re_path,include
+
+from timer import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('timer/', views.timer),
+    include()
+    #路由配置   路径>视图函数
+    re_path(r'articles/2020/$', views.special_case_2020),
+    #re_path(r'^articles/([0-9]{4})/$',)
+
+
 ]
