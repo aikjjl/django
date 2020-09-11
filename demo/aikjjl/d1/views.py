@@ -35,3 +35,12 @@ def addbooktodatabase(request):
     # 重定向到添加成功页面
     from django.http import HttpResponseRedirect
     return HttpResponseRedirect('/addok/')
+
+
+from django.shortcuts import render
+def home(request):
+    string="hahaha"
+    lis=["a","b","c","d"]
+    dic={'a':'哈哈','b':'多多'}
+    lis1=map(str,range(100))
+    return render(request, 'home.html',{'strin':string,'lis':lis,'dic':dic,'lis1':lis1})

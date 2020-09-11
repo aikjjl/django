@@ -16,16 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from d1 import views
+from d1 import views as d1_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     ## 利用表单增加图书，实现前台与数据库交互
-    path(r'd1/', views.addbook),
+    path(r'd1/', d1_views.addbook),
 
-## 处理表单提交的数据，实现前台与数据库交互
-    path(r'^addbooktodatabase/', views.addbooktodatabase),
+    ## 处理表单提交的数据，实现前台与数据库交互
+    path(r'^addbooktodatabase/', d1_views.addbooktodatabase),
 
-
+    path(r'', d1_views.home),
 ]

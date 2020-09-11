@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+demo
+
+<h1>引用views中的变量</h1>
+{{ strin }}
+
+<h1>for 循环 和 List内容的显示</h1>
+{% for i in lis %}
+{{ i }}
+{% endfor %}
+
+<h1>显示字典中内容：</h1>
+1:{{ dic.a }}
+2:{{ dic.b }}
+遍历
+{% for key,value in dic.items %}
+    {{ key }}: {{ value }}
+{% endfor %}
+
+
+<h1>在模板进行 条件判断和 for 循环的详细操作：</h1>
+{% for item in lis1 %}
+    {{item}}
+{% endfor %}
+
+</body>
+</html>
