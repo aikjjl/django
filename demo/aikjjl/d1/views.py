@@ -44,3 +44,4 @@ def home(request):
     dic={'a':'哈哈','b':'多多'}
     lis1=map(str,range(100))
     return render(request, 'home.html',{'strin':string,'lis':lis,'dic':dic,'lis1':lis1})
+

@@ -19,3 +19,5 @@ python manage.py createsuperuser
 # 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填
 # 修改 用户密码可以用：
 python manage.py changepassword username
+
+
