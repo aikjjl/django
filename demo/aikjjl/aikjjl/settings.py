@@ -25,7 +25,7 @@ SECRET_KEY = '3_)_9zfb4-@alzeaea*%v3$ioo@u89p7phhwyk)nn%10_b_b37'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,14 +83,16 @@ DATABASES = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',
-        'USER': 'mydatabaseuser',
-        'PASSWORD': 'mypassword',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'demo',  # 要连接的数据库，连接前需要创建好
+        'USER': 'root',  # 连接数据库的用户名
+        'PASSWORD': '123456',  # 连接数据库的密码
+        'HOST': '172.17.0.2',  # 连接主机，默认本级
+        'PORT': 3306,  # 端口 默认3306
     }
 }
+
+#https://dbeaver.io/download/
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
