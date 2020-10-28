@@ -1,7 +1,7 @@
 
 1，创建更改文件
 python manage.py makemigrations
-1122
+1122333
 2. 将生成的py文件应用到数据库
 python manage.py migrate
 
